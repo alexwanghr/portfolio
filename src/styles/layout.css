@@ -1,0 +1,40 @@
+/* Spacing System - 8px Base Scale
+ * Consistent spacing variables for margins, paddings, and gaps
+ * Based on 8px increments for visual harmony
+ */
+:root {
+  /* Base spacing scale (8px increments) */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 1.5rem;    /* 24px */
+  --spacing-lg: 2rem;      /* 32px */
+  --spacing-xl: 3rem;      /* 48px */
+  --spacing-2xl: 4rem;     /* 64px */
+  --spacing-3xl: 6rem;     /* 96px */
+  
+  /* Section spacing */
+  --section-padding: var(--spacing-xl);      /* 48px - internal section padding */
+  --section-gap: var(--spacing-xl);          /* 48px - vertical space between sections */
+  
+  /* Component spacing */
+  --component-gap-sm: var(--spacing-sm);     /* 16px - small gaps */
+  --component-gap-md: var(--spacing-md);     /* 24px - medium gaps */
+  --component-gap-lg: var(--spacing-lg);     /* 32px - large gaps */
+  --component-gap-xl: var(--spacing-xl);     /* 48px - extra large gaps */
+  
+  /* Element spacing */
+  --element-padding-sm: var(--spacing-sm);   /* 16px - small padding */
+  --element-padding-md: var(--spacing-md);   /* 24px - medium padding */
+  --element-padding-lg: var(--spacing-lg);   /* 32px - large padding */
+}
+
+/* Section spacing - increased vertical whitespace between sections */
+section {
+  margin-bottom: var(--section-gap);
+}
+
+/* Last section should not have bottom margin */
+section:last-child {
+  margin-bottom: 0;
+}
+

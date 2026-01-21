@@ -1,0 +1,98 @@
+/* Color System - Neutral Warm Palette
+ * A cohesive color system using warm, muted tones for a professional and approachable aesthetic.
+ * All colors are desaturated and neutral to maintain visual harmony across the portfolio.
+ */
+:root {
+  /* Core Colors */
+  --color-bg: #faf9f7;        /* Warm off-white background */
+  --color-text-primary: #2c2c2c;   /* Primary text - deep warm gray */
+  --color-text-secondary: #6b6b6b; /* Secondary text - medium warm gray */
+  --color-accent: #3a3a3a;     /* Accent color - dark warm gray for buttons and highlights */
+  --color-border: #e5e4e2;     /* Border and divider - light warm gray */
+  --color-surface: #f5f4f2;    /* Surface color for cards and elevated elements */
+  --color-overlay: rgba(44, 44, 44, 0.9); /* Overlay for modals - dark with transparency */
+  
+  /* Section background variations - subtle contrast for visual distinction */
+  --color-section-home: #faf9f7;      /* Base warm off-white */
+  --color-section-projects: #f8f7f5;   /* Slightly cooler tone */
+  --color-section-photography: #faf9f7; /* Back to base */
+  --color-section-cooking: #f7f6f4;   /* Slightly warmer tone */
+  --color-section-messages: #faf9f7;   /* Back to base */
+
+  /* Typography System - Two-Font System
+   * Serif for headings (editorial feel) + Sans-serif for body (clean feel)
+   * Maximum 2 font families, 4 font weights total
+   */
+  --font-heading: 'Playfair Display', serif;  /* Editorial serif for headings */
+  --font-body: 'Inter', sans-serif;          /* Clean sans-serif for body text */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+/* Typography Hierarchy - Semantic HTML Elements */
+
+/* Headings - Editorial Serif */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+/* Body Text - Clean Sans-serif */
+p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  margin-bottom: 1em;
+}
+
+/* Secondary text elements */
+small, .text-secondary {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Medium weight for emphasis */
+strong, b, .text-medium {
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
