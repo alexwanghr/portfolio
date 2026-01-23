@@ -61,8 +61,8 @@ function Home() {
           A creative and passionate fiber artist who loves coding, travel, photography, and food.
           </p>
           <a 
-            href="/cv.pdf" 
-            download="CV.pdf"
+            href="/Huirong_Wang_Resume.pdf" 
+            download="Huirong_Wang_Resume.pdf"
             style={{ 
               display: 'inline-block', 
               padding: '0.75rem 1.5rem', 

@@ -1,13 +1,24 @@
 import { useState } from 'react'
-import rongCrochetContent from '../data/rongCrochetContent.jsx'
+import DevLog from '../data/devLog.jsx'
+import RongCrochetReadme from '../data/rongcrochetreadme.jsx'
 
 const RongCrochet = ({ onBack }) => {
-  const [activeTab, setActiveTab] = useState('user-story')
+  const [activeTab, setActiveTab] = useState('readme')
+
+  const rongCrochetContent = {
+    'readme': { 
+      title: 'README',
+      content: <RongCrochetReadme />
+    },
+    'dev-log': {
+      title: 'Dev Log',
+      content: <DevLog />
+    }
+  }
 
   const tabs = [
-    // { id: 'user-story', label: 'User Story' },
-    { id: 'dev-log', label: 'Dev Log' },
-    { id: 'architecture', label: 'Architecture' }
+    { id: 'readme', label: 'README' },
+    { id: 'dev-log', label: 'Dev Log' }
   ]
 
   return (

@@ -1,13 +1,20 @@
 import { useState } from 'react'
-import reelroomContent from '../data/reelroomContent.jsx'
+import ReelroomReadme from '../data/reelroomreadme.jsx'
 
 const ReelRoom = ({ onBack }) => {
-  const [activeTab, setActiveTab] = useState('user-story')
+  const [activeTab, setActiveTab] = useState('readme')
+
+  const reelroomContent = {
+    'readme': { 
+      title: 'README',
+      content: <ReelroomReadme />
+    }
+  }
 
   const tabs = [
     // { id: 'user-story', label: 'User Story' },
     // { id: 'dev-log', label: 'Dev Log' },
-    { id: 'architecture', label: 'Architecture' }
+    { id: 'readme', label: 'README' }
   ]
 
   return (

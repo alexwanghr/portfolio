@@ -67,7 +67,7 @@ const DevLog = () => (
       <li>Database(user data model， AWS RDS)</li>
       <li>Frontend(sign up, log in, order history, order status)</li>
       <li>Backend(authentication, get order history)</li>
-      <li>Validate access control</li>
+      <li>Validate access control</li >
      
       <h4><strong>Subscription</strong></h4>
       <li> Design</li>
