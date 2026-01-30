@@ -21,15 +21,13 @@ ReelRoom/
 
 ## Features
 
-- **Movie Management**: Add, update, and delete movies with metadata (title, year, poster, genre, overview)
+- **Movie Management**: Add, update, and delete movies with metadata
 - **Member-based Organization**: Group movies by family members with individual watchlists
 - **Viewing Status**: Mark movies as watched/unwatched with optional date tracking
-- **Rating System**: Assign ratings to watched movies
 - **Filtering**: Filter movies by watched status or cinema viewings
 - **Sorting**: Sort movies by rating (high to low) or date (recent to old) per member
 - **Search**: Search movies using TMDB API integration
 - **AI Recommendations**: Generate movie recommendations based on viewing history using OpenAI
-- **Statistics**: Display unwatched/total movie counts per member
 
 ## Tech Stack
 
@@ -38,6 +36,7 @@ ReelRoom/
 - React Router DOM 7
 - Vite 7
 - Tailwind CSS 4
+
 **Backend**
 - AWS Lambda (Node.js 20)
 - DynamoDB

@@ -1,8 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ReelroomReadme from '../data/reelroomreadme.jsx'
 
 const ReelRoom = ({ onBack }) => {
   const [activeTab, setActiveTab] = useState('readme')
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const reelroomContent = {
     'readme': { 

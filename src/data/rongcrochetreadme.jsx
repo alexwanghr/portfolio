@@ -4,29 +4,37 @@ import ReactMarkdown from 'react-markdown'
 const markdownContent = `
 ## Project Structure
 
-\`\`\`
-src/
-├── api/              # API service functions
-│   ├── config.js     # S3 config endpoints (categories, shipping, news, hot)
-│   ├── order.js      # Order management
-│   ├── products.js   # Product CRUD
-│   ├── stripeCheckout.js  # Stripe session creation
-│   └── upload.js     # File upload utilities
-├── components/       # React components
-│   ├── checkout/     # Checkout flow (Cart, OrderReview, Checkout, OrderConfirmation)
-│   ├── news/         # News and articles
-│   └── product/      # Product display components
-├── context/          # React Context providers
-│   ├── CartContext.jsx    # Shopping cart state
-│   └── ProductContext.jsx  # Product data state
-└── utils/            # Utility functions
-    └── fetchWrapper.js    # HTTP request wrapper
 
-public/
-├── img/              # Static images
-├── categories.json   # Category definitions
-├── news-items.json   # News articles data
-└── shipping-rates.json  # Shipping configuration
+\`\`\`
+frontend/
+├── src/
+│   ├── api/              # API service functions
+│   │   ├── config.js     # S3 config endpoints (categories, shipping, news, hot)
+│   │   ├── order.js      # Order management
+│   │   ├── products.js   # Product CRUD
+│   │   ├── stripeCheckout.js  # Stripe session creation
+│   │   └── upload.js     # File upload utilities
+│   ├── components/       # React components
+│   │   ├── checkout/     # Checkout flow (Cart, OrderReview, Checkout, OrderConfirmation)
+│   │   ├── news/         # News and articles
+│   │   └── product/      # Product display components
+│   ├── context/          # React Context providers
+│   │   ├── CartContext.jsx    # Shopping cart state
+│   │   └── ProductContext.jsx  # Product data state
+│   └── utils/            # Utility functions
+│       └── fetchWrapper.js    # HTTP request wrapper
+└── public/
+    ├── img/              # Static images
+    ├── categories.json   # Category definitions
+    ├── news-items.json   # News articles data
+    └── shipping-rates.json  # Shipping configuration
+
+backend/              # AWS Serverless Backend
+└── lambda/           # Lambda functions
+    ├── products/     # Product CRUD operations
+    ├── orders/       # Order management
+    ├── stripe/       # Stripe checkout & webhook handlers
+    └── upload/       # S3 presigned URL generation
 \`\`\`
 
 ## Architecture Diagram
@@ -35,25 +43,29 @@ public/
 ## Features
 
 - Product catalog with filtering (category, occasion, theme, yarn material) and sorting
-- Shopping cart with localStorage persistence
+- Shopping cart state persisted in browser storage
 - Order review page with quantity adjustment and stock validation
 - Checkout with Stripe payment integration
 - Shipping rate calculation based on weight
-- Hot products feature with priority display
+- priority display
 - News and articles system with markdown support
 - Color variant support for products
-- Stock management with quantity limits
 
 ## Tech Stack
 
-- **React 19.1.1** - UI framework
-- **Vite 7.1.7** - Build tool
-- **React Router DOM 7.11.0** - Routing
-- **Tailwind CSS 4.1.14** - Styling
-- **Stripe** - Payment processing
-- **EmailJS** - Contact form service
-- **React Markdown** - Markdown rendering
-- **Lucide React** - Icons
+- **React 19.1.1** 
+- **Vite 7.1.7**  
+- **React Router DOM 7.11.0** 
+- **Tailwind CSS 4.1.14** 
+- **Stripe**  
+- **EmailJS** 
+- **React Markdown**  
+- **Lucide React** 
+- **AWS Lambda**  
+- **AWS API Gateway**  
+- **AWS S3**  
+- **AWS DynamoDB**  
+- **AWS SES**  
 
 ## API Overview
 
@@ -72,7 +84,6 @@ public/
 - \`GET categories.json\` - Product categories, occasions, themes, yarns
 - \`GET shipping-rates.json\` - Shipping rate configuration
 - \`GET news-items.json\` - News articles and events
-- \`GET hot.json\` - Hot product IDs array
 
 ### S3 Assets (\VITE_S3_BASE_URL_PRODUCT_IMAGE)
 

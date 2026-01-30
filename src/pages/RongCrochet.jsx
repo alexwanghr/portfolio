@@ -1,9 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import DevLog from '../data/devLog.jsx'
 import RongCrochetReadme from '../data/rongcrochetreadme.jsx'
 
 const RongCrochet = ({ onBack }) => {
   const [activeTab, setActiveTab] = useState('readme')
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const rongCrochetContent = {
     'readme': { 
